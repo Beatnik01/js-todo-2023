@@ -5,6 +5,7 @@ const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
 let toDos = [];
+let isOn = false;
 
 function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -17,6 +18,19 @@ function deleteToDo(event) {
   saveTodos();
 }
 
+function checkToDo(event) {
+  const li = event.target.closest("li");
+  if ((li.tagName = "li")) {
+    isOn = !isOn;
+    li.style.backgroundColor = isOn ? "#3CB371" : "tomato";
+    li.style.borderColor = "transparent";
+    let toDo = toDos.find((todo) => todo.id === parseInt(li.id));
+    toDo.isOn = isOn;
+    saveTodos();
+    console.log(toDo);
+  }
+}
+
 function paintToDo(newTodoObj) {
   const li = document.createElement("li");
   li.id = newTodoObj.id;
@@ -24,7 +38,10 @@ function paintToDo(newTodoObj) {
   const btn = document.createElement("button");
   span.innerText = newTodoObj.text;
   btn.innerText = "❌";
+  li.style.backgroundColor = newTodoObj.isOn ? "#3CB371" : "tomato";
+  li.style.borderColor = "transparent";
   btn.addEventListener("click", deleteToDo);
+  li.addEventListener("click", checkToDo);
   li.appendChild(span);
   li.appendChild(btn);
   toDoList.appendChild(li);
@@ -36,6 +53,7 @@ function handleToDoSumbit(event) {
   const newTodoObj = {
     id: Date.now(),
     text: newTodo,
+    isOn: false,
   };
   toDoInput.value = "";
   toDos.push(newTodoObj);

@@ -24,7 +24,7 @@ const quotes = [
   {
     quote:
       "The fastest way to change yourself is to hang out with people who are already the way you want to be",
-    author: "REid Hoffman",
+    author: "Reid Hoffman",
   },
   {
     quote:
@@ -39,7 +39,7 @@ const quotes = [
   {
     quote:
       "The only thing worse than starting something and falling.. is not starting something",
-    author: "SEth Godin",
+    author: "Seth Godin",
   },
   {
     quote:

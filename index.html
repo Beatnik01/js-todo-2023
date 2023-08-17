@@ -3,29 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+    <div class="bg"></div>
+    <div class="bg-cover"></div>
+
+    <nav>
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <header>
+      <span id="clock">00:00</span>
+    </header>
+
+    <main>
+      <div class="login-container">
+        <form id="login-form" class="hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+          <button>Log In</button>
+        </form>
+
+        <div class="greetings">
+          <span id="greeting" class="hidden">Hello,</span>
+          <span id="greetingName" class="hidden"></span>
+        </div>
+      </div>
+
+      <span class="todo-title">What are your plans for today?</span>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </main>
+
+    <footer>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </footer>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
