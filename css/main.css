@@ -1,15 +1,25 @@
 main {
+  position: absolute;
+  top: 30%;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+}
+
+main #clock {
+  font-size: 180px;
+  font-weight: 600;
+  opacity: 0.9;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-bottom: 20px;
 }
 
 main .login-container {
   height: 100px;
-  margin: 70px 0px;
 }
 
 main #login-form {
@@ -55,6 +65,7 @@ main .todo-title {
   font-weight: 600;
   -webkit-user-select: none;
   user-select: none;
+  margin-top: 10px;
 }
 
 main #todo-form input {
@@ -110,54 +121,4 @@ main #todo-list li > button {
 
 main #todo-list li > button:hover {
   cursor: pointer;
-}
-
-main #fiveDayWeather {
-  position: absolute;
-  bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-}
-
-main #fiveDayWeather img {
-  margin: -10px;
-}
-
-main #fiveDayWeather > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 200px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid black;
-  margin: 0px 10px;
-  border: none;
-}
-
-main #fiveDayWeather .weatherDay {
-  font-size: 20px;
-  font-weight: 600;
-}
-main #fiveDayWeather .weatherTempMin {
-  font-size: 20px;
-  color: #80a8f0;
-  font-weight: 600;
-  margin-right: 5px;
-}
-
-main #fiveDayWeather .weatherTempMax {
-  font-size: 25px;
-  color: #cd3534;
-  font-weight: 600;
-}
-
-main #fiveDayWeather .weatherDesc {
-  font-size: 15px;
 }

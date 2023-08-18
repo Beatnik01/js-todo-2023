@@ -20,7 +20,7 @@ nav #cityInfo {
 
 nav #weatherIcon {
   position: absolute;
-  left: -25px;
+  left: -30px;
   top: -10px;
 }
 
@@ -50,10 +50,48 @@ header {
   margin-top: 100px;
 }
 
-header #clock {
-  font-size: 180px;
+header #fiveDayWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+header #fiveDayWeather img {
+  margin: -10px;
+}
+
+header #fiveDayWeather > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid black;
+  margin: 0px 10px;
+  border: none;
+}
+
+header #fiveDayWeather .weatherDay {
+  font-size: 20px;
   font-weight: 600;
-  opacity: 0.9;
-  -webkit-user-select: none;
-  user-select: none;
+}
+header #fiveDayWeather .weatherTempMin {
+  font-size: 20px;
+  color: #80a8f0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+header #fiveDayWeather .weatherTempMax {
+  font-size: 25px;
+  color: #cd3534;
+  font-weight: 600;
+}
+
+header #fiveDayWeather .weatherDesc {
+  font-size: 15px;
 }
