@@ -6,7 +6,9 @@ function onGeoOk(position) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   const fivedayurl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-  fetch(url)
+  fetch(url, {
+    mode: "cors",
+  })
     .then((reponse) => reponse.json())
     .then((data) => {
       const weatherIcon = document.querySelector("#weatherIcon");

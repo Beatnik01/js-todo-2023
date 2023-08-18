@@ -29,8 +29,6 @@ function paintGreetings() {
   greetingName.innerText = `${greetingText} ${username}`;
   greetingName.classList.remove(HIDDEN_CLASSNAME);
   greeting.classList.remove(HIDDEN_CLASSNAME);
-
-  console.log(time);
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);
