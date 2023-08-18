@@ -50,11 +50,12 @@ main #greetingName {
   font-style: italic;
 }
 
-main .todo-title {
+main #todo-title {
   font-size: 30px;
   font-weight: 600;
   -webkit-user-select: none;
   user-select: none;
+  margin-top: 150px;
 }
 
 main #todo-form input {
