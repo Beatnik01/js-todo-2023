@@ -25,9 +25,7 @@ function checkToDo(event) {
     li.style.backgroundColor = isOn ? "#3CB371" : "tomato";
     li.style.borderColor = "transparent";
     let toDo = toDos.find((todo) => todo.id === parseInt(li.id));
-    toDo.isOn = isOn;
     saveTodos();
-    console.log(toDo);
   }
 }
 

@@ -70,11 +70,43 @@ nav {
   right: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   -webkit-user-select: none;
   user-select: none;
+}
+
+nav #cityInfo {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav #weatherIcon {
+  position: absolute;
+  left: -25px;
+  top: -10px;
+}
+
+nav #weather {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav #weatherCondition {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+nav #cityName {
+  font-size: 15px;
 }
 
 header {
@@ -122,6 +154,11 @@ main #login-form button {
   padding: 5px 50px;
 }
 
+main #login-form button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 main .greetings {
   -webkit-user-select: none;
   user-select: none;
@@ -148,6 +185,11 @@ main .todo-title {
 
 main #todo-form input {
   margin: 10px 0px;
+  opacity: 0.7;
+}
+
+main #todo-form input:focus {
+  opacity: 1;
 }
 
 main #todo-form input::placeholder {
@@ -170,6 +212,19 @@ main #todo-list li {
   width: 300px;
   height: 40px;
   opacity: 0.9;
+  animation: listAnimation 1s ease-in-out;
+}
+
+@keyframes listAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 main #todo-list li > button {
@@ -181,6 +236,56 @@ main #todo-list li > button {
 
 main #todo-list li > button:hover {
   cursor: pointer;
+}
+
+main #fiveDayWeather {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+main #fiveDayWeather img {
+  margin: -10px;
+}
+
+main #fiveDayWeather > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid black;
+  margin: 0px 10px;
+  border: none;
+}
+
+main #fiveDayWeather .weatherDay {
+  font-size: 20px;
+  font-weight: 600;
+}
+main #fiveDayWeather .weatherTempMin {
+  font-size: 20px;
+  color: #80a8f0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+main #fiveDayWeather .weatherTempMax {
+  font-size: 25px;
+  color: #cd3534;
+  font-weight: 600;
+}
+
+main #fiveDayWeather .weatherDesc {
+  font-size: 15px;
 }
 
 footer {

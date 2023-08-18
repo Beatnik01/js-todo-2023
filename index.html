@@ -11,9 +11,14 @@
     <div class="bg-cover"></div>
 
     <nav>
+      <div id="cityInfo">
+        <span></span>
+        <span></span>
+      </div>
       <div id="weather">
-        <span></span>
-        <span></span>
+        <img id="weatherIcon" src="" />
+        <span id="weatherCondition"></span>
+        <span id="cityName"></span>
       </div>
     </nav>
 
@@ -34,7 +39,7 @@
         </form>
 
         <div class="greetings">
-          <span id="greeting" class="hidden">Hello,</span>
+          <span id="greeting" class="hidden"></span>
           <span id="greetingName" class="hidden"></span>
         </div>
       </div>
@@ -48,6 +53,8 @@
         />
       </form>
       <ul id="todo-list"></ul>
+
+      <div id="fiveDayWeather"></div>
     </main>
 
     <footer>
