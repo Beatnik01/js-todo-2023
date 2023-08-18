@@ -1,0 +1,163 @@
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .login-container {
+  height: 100px;
+  margin: 70px 0px;
+}
+
+main #login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #login-form button {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  margin-top: 10px;
+  font-size: 30px;
+  padding: 5px 50px;
+}
+
+main #login-form button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main .greetings {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+main #greeting {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+main #greetingName {
+  margin-left: 10px;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+main .todo-title {
+  font-size: 30px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+main #todo-form input {
+  margin: 10px 0px;
+  opacity: 0.7;
+}
+
+main #todo-form input:focus {
+  opacity: 1;
+}
+
+main #todo-form input::placeholder {
+  font-size: 20px;
+}
+
+main #todo-list li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+main #todo-list li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 40px;
+  opacity: 0.9;
+  animation: listAnimation 1s ease-in-out;
+}
+
+@keyframes listAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main #todo-list li > button {
+  position: absolute;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+main #todo-list li > button:hover {
+  cursor: pointer;
+}
+
+main #fiveDayWeather {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+main #fiveDayWeather img {
+  margin: -10px;
+}
+
+main #fiveDayWeather > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid black;
+  margin: 0px 10px;
+  border: none;
+}
+
+main #fiveDayWeather .weatherDay {
+  font-size: 20px;
+  font-weight: 600;
+}
+main #fiveDayWeather .weatherTempMin {
+  font-size: 20px;
+  color: #80a8f0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+main #fiveDayWeather .weatherTempMax {
+  font-size: 25px;
+  color: #cd3534;
+  font-weight: 600;
+}
+
+main #fiveDayWeather .weatherDesc {
+  font-size: 15px;
+}

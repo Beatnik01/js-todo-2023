@@ -1,0 +1,59 @@
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+nav #cityInfo {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav #weatherIcon {
+  position: absolute;
+  left: -25px;
+  top: -10px;
+}
+
+nav #weather {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav #weatherCondition {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+nav #cityName {
+  font-size: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+header #clock {
+  font-size: 180px;
+  font-weight: 600;
+  opacity: 0.9;
+  -webkit-user-select: none;
+  user-select: none;
+}
