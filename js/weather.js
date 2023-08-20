@@ -6,7 +6,17 @@ function onGeoOk(position) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   const fivedayurl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-  fetch(url)
+  //CORS headers
+  const options = {
+    header: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+      "Access-Control-Allow-Headers": "Content-Type,Authorization",
+      "Aceess-Control-Allow-SameSite": "Lax",
+    },
+  };
+
+  fetch(url, options)
     .then((reponse) => reponse.json())
     .then((data) => {
       const weatherIcon = document.querySelector("#weatherIcon");
@@ -19,7 +29,7 @@ function onGeoOk(position) {
       city.innerText = data.name;
     });
 
-  fetch(fivedayurl)
+  fetch(fivedayurl, options)
     .then((response) => response.json())
     .then((data) => {
       const fiveDayWeather = document.querySelector("#fiveDayWeather");
